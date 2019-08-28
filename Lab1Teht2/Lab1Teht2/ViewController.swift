@@ -9,13 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("lol")
         // Do any addcdsitional setup after loading the view.
     }
 
-
+    @IBAction func pressbutt(_ sender: Any) {
+        let nameString = name.text!
+        nameLabel.text = "Hello " + nameString + "!"
+    }
+    
 }
 
